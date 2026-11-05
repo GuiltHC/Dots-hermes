@@ -28,4 +28,19 @@
     <string name="goals_delete_title">Delete “%1$s”?</string>
     <string name="goals_delete_text">The agent will remove this scheduled task. Its notes stay on the server.</string>
     <string name="goals_delete_confirm">Delete</string>
+    <string name="memory_title">Memory</string>
+    <string name="memory_entry_hint">What the agent remembers about you and its work</string>
+    <string name="memory_intro">The agent\'s long-term notes. Edits apply from its next conversation session.</string>
+    <string name="memory_agent">Agent notes</string>
+    <string name="memory_user">About you</string>
+    <string name="memory_usage">%1$d of %2$d characters</string>
+    <string name="memory_empty">Empty.</string>
+    <string name="memory_add">Add an entry</string>
+    <string name="memory_new">New entry</string>
+    <string name="memory_edit">Edit entry</string>
+    <string name="memory_delete">Delete</string>
+    <string name="memory_delete_title">Delete this entry?</string>
+    <string name="memory_error">Not saved: %1$s</string>
+    <string name="memory_offline">No connection to the gateway.</string>
+    <string name="memory_unsupported">The gateway doesn\'t support memory editing yet: install the fork\'s plugin extension (fork_memory.py) on the server.</string>
 </resources>

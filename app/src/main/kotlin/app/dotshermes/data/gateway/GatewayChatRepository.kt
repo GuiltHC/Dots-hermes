@@ -171,6 +171,10 @@ class GatewayChatRepository(
     private val _webSessions = MutableStateFlow<List<WebSession>?>(null)
     val webSessions: StateFlow<List<WebSession>?> = _webSessions.asStateFlow()
 
+    // Форк: трамы незнакомых автору типов уходят модулям форка (app.dotshermes.fork), и они же шлют свои.
+    val forkFrames = kotlinx.coroutines.flow.MutableSharedFlow<JSONObject>(extraBufferCapacity = 16)
+    fun sendForkFrame(json: String): Boolean = _connection.value is ConnectionState.Connected && socket?.send(json) == true
+
     @Volatile private var config: GatewayConfig? = null
     @Volatile private var socket: WebSocket? = null
     @Volatile private var lastSeq = 0L
@@ -664,7 +668,9 @@ class GatewayChatRepository(
                 // Plugin d'avant les sessions web : la trame est inconnue, l'erreur ne porte pas de `ref`.
                 // Seules nos demandes de jeton peuvent la provoquer ici : on les clôt sans attendre le délai.
                 if (frame.optString("code") == "unknown_type") webTokenRequests.values.forEach { it.complete(WebTokenResult.Unsupported) }
+                forkFrames.tryEmit(frame) // форк
             }
+            else -> forkFrames.tryEmit(frame) // форк
         }
     }
 

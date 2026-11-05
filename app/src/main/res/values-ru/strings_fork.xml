@@ -30,4 +30,19 @@
     <string name="goals_delete_title">Удалить «%1$s»?</string>
     <string name="goals_delete_text">Агент удалит эту задачу по расписанию. Её заметки на сервере останутся.</string>
     <string name="goals_delete_confirm">Удалить</string>
+    <string name="memory_title">Память</string>
+    <string name="memory_entry_hint">Что агент помнит о вас и о своей работе</string>
+    <string name="memory_intro">Долговременные заметки агента. Правки вступают в силу с его следующего сеанса.</string>
+    <string name="memory_agent">Заметки агента</string>
+    <string name="memory_user">О вас</string>
+    <string name="memory_usage">%1$d из %2$d символов</string>
+    <string name="memory_empty">Пусто.</string>
+    <string name="memory_add">Добавить запись</string>
+    <string name="memory_new">Новая запись</string>
+    <string name="memory_edit">Правка записи</string>
+    <string name="memory_delete">Удалить</string>
+    <string name="memory_delete_title">Удалить запись?</string>
+    <string name="memory_error">Не сохранено: %1$s</string>
+    <string name="memory_offline">Нет связи со шлюзом.</string>
+    <string name="memory_unsupported">Шлюз пока не умеет править память: на сервер нужно поставить расширение плагина из форка (fork_memory.py).</string>
 </resources>

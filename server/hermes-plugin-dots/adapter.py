@@ -892,6 +892,9 @@ class DotsAdapter(BasePlatformAdapter):
                 self._push_sender.register(str(frame.get("token") or ""))
         elif kind in ("web_token_create", "web_sessions_get", "web_revoke"):
             await self._on_web_session_frame(kind, frame, ws)
+        elif kind in ("memory_get", "memory_edit") and self._clients[ws].get("web") is None:  # fork: phone only
+            from .fork_memory import handle as _memory_frame
+            await self._push(await _memory_frame(frame), ws)
         else:
             await self._push({"type": "error", "code": "unknown_type"}, ws)
 

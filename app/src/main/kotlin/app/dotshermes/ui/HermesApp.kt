@@ -54,6 +54,9 @@ import kotlinx.coroutines.launch
 import app.dotshermes.data.model.MAIN_CHAT
 import app.dotshermes.fork.goals.GoalsEntryRow
 import app.dotshermes.fork.goals.GoalsSheet
+import app.dotshermes.fork.memory.MemoryEntryRow
+import app.dotshermes.fork.memory.MemorySheet
+import app.dotshermes.fork.memory.MemoryViewModel
 
 /** Racine : écran d'appairage tant que le gateway n'est pas connecté, puis la conversation unique. */
 @Composable
@@ -78,6 +81,7 @@ fun HermesApp(
     var agentMenuOpen by rememberSaveable { mutableStateOf(false) }
     var activityOpen by rememberSaveable { mutableStateOf(false) }
     var goalsOpen by rememberSaveable { mutableStateOf(false) } // форк: экран «Цели»
+    var memoryOpen by rememberSaveable { mutableStateOf(false) } // форк: экран «Память»
     var screenOpen by rememberSaveable { mutableStateOf(false) }
     var screenTakeover by rememberSaveable { mutableStateOf(false) }
     // App web : scanner du QR code d'un navigateur, et liste des navigateurs appairés.
@@ -207,7 +211,12 @@ fun HermesApp(
                 onStop = viewModel::stopTurn,
                 onOpenScreen = { screenOpen = true },
                 onDismiss = { activityOpen = false },
-                header = { if (!demo) GoalsEntryRow(snapshot) { activityOpen = false; goalsOpen = true } },
+                header = {
+                    if (!demo) {
+                        GoalsEntryRow(snapshot) { activityOpen = false; goalsOpen = true }
+                        MemoryEntryRow { activityOpen = false; memoryOpen = true }
+                    }
+                },
             )
         }
 
@@ -219,6 +228,11 @@ fun HermesApp(
                 onSendToMain = { text -> viewModel.selectChat(MAIN_CHAT); viewModel.send(text) },
                 onDismiss = { goalsOpen = false },
             )
+        }
+
+        if (memoryOpen) {
+            val memory: MemoryViewModel = viewModel { MemoryViewModel(AppContainer.agents) }
+            MemorySheet(memory, onDismiss = { memoryOpen = false })
         }
 
         if (screenOpen) {
