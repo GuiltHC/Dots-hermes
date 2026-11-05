@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Русская локализация (форк GuiltHC). Ключи совпадают с values/strings.xml; новые строки автора
+     без перевода просто показываются по-английски. -->
+<resources>
+    <!-- Профиль агента -->
+    <string name="profile_tagline_gateway">Личный агент · шлюз Hermes</string>
+    <string name="profile_tagline_demo">Личный агент · удалённый сервер</string>
+
+    <!-- Подключение к шлюзу -->
+    <string name="gateway_connecting">Подключаюсь к шлюзу…</string>
+    <string name="gateway_syncing">Синхронизирую переписку…</string>
+    <string name="gateway_error_invalid_url">Неверный адрес: он должен начинаться с wss://</string>
+    <string name="gateway_error_timeout">Шлюз не отвечает.</string>
+    <string name="gateway_error_cancelled">Подключение отменено.</string>
+    <string name="gateway_error_token_refused">Шлюз отклонил токен.</string>
+    <string name="gateway_error_not_found">По этому адресу нет шлюза Dots.</string>
+    <string name="gateway_error_unreachable">Шлюз недоступен (%1$s).</string>
+    <string name="gateway_error_closed">Шлюз закрыл соединение.</string>
+
+    <!-- Подписи инструментов агента -->
+    <string name="tool_terminal">Выполняет команду</string>
+    <string name="tool_process">Следит за процессом</string>
+    <string name="tool_read_file">Читает файл</string>
+    <string name="tool_search_files">Ищет файлы</string>
+    <string name="tool_write_file">Записывает файл</string>
+    <string name="tool_patch">Правит файл</string>
+    <string name="tool_web_search">Ищет в интернете</string>
+    <string name="tool_web_extract">Читает веб-страницу</string>
+    <string name="tool_skill_view">Читает навык</string>
+    <string name="tool_skills_list">Просматривает навыки</string>
+    <string name="tool_skill_manage">Обновляет навык</string>
+    <string name="tool_memory">Запоминает</string>
+    <string name="tool_session_search">Ищет в своих воспоминаниях</string>
+    <string name="tool_execute_code">Запускает код</string>
+    <string name="tool_delegate_task">Поручает подагенту</string>
+    <string name="tool_todo">Обновляет свой план</string>
+    <string name="tool_cronjob">Настраивает задачу по расписанию</string>
+    <string name="tool_vision_analyze">Разбирает изображение</string>
+    <string name="tool_image_generate">Рисует изображение</string>
+    <string name="tool_text_to_speech">Озвучивает текст</string>
+    <string name="tool_send_message">Отправляет сообщение</string>
+    <string name="tool_tool_search">Ищет инструмент</string>
+    <string name="tool_tool_describe">Изучает инструмент</string>
+    <string name="tool_browser">Работает в браузере</string>
+    <string name="tool_browser_request_takeover">Просит вас перехватить управление</string>
+
+    <!-- Демо-режим: имитация подключения -->
+    <string name="demo_mode">Демо-режим</string>
+    <string name="demo_connect_step_1">Ищу шлюз…</string>
+    <string name="demo_connect_step_2">Защищённое рукопожатие…</string>
+    <string name="demo_connect_step_3">Связываюсь с Hermes…</string>
+    <string name="demo_greeting">Снова привет! Шлюз подключён, я на связи 👋</string>
+    <string name="demo_voice_transcript">(демо) получено голосовое на %1$d с</string>
+
+    <!-- Демо-режим: задачи по расписанию -->
+    <string name="demo_cron_mail_name">Утренний разбор почты</string>
+    <string name="demo_cron_mail_prompt">Разбирает входящие и коротко пересказывает важное.</string>
+    <string name="demo_cron_backup_name">Контроль бэкапа сервера</string>
+    <string name="demo_cron_backup_prompt">Проверяет, что ночной бэкап прошёл.</string>
+
+    <!-- Демо-режим: начальная история -->
+    <string name="demo_seed_watching">Сегодня ночью присматриваю за сервером. Если что-то случится — напишу.</string>
+    <string name="demo_seed_thanks">Отлично, спасибо, Hermes!</string>
+    <string name="demo_seed_good_evening">Хорошего вечера 🌙</string>
+    <string name="demo_seed_task_title">Утренний отчёт</string>
+    <string name="demo_seed_task_step_1">Проверить сервисы</string>
+    <string name="demo_seed_task_step_2">Разобрать почту</string>
+    <string name="demo_seed_task_step_3">Перезапустить бэкап</string>
+    <string name="demo_seed_task_step_4">Написать сводку</string>
+    <string name="demo_seed_good_morning">Доброе утро ☀️ Всё в порядке.</string>
+    <string name="demo_seed_night_report">За ночь разобрал 23 письма, на 2 ждут вашего ответа. Бэкап остановился в 3:12 — я его перезапустил, ничего не потеряно.</string>
+    <string name="demo_seed_ask_recap">Супер. Подготовишь недельную сводку для клиента?</string>
+    <string name="demo_seed_approval_title">Отправить клиенту «Недельную сводку»</string>
+    <string name="demo_seed_approval_detail">Здравствуйте, Клэр!\nПрогресс за неделю: новая версия на тестировании, время отклика сократилось вдвое…</string>
+    <string name="demo_seed_sent">Отправлено ✉️</string>
+
+    <!-- Демо-режим: заготовленные ответы -->
+    <string name="demo_fallback_1">Принято. Буду иметь в виду и сообщу, если что-то изменится.</string>
+    <string name="demo_fallback_2">Хорошая мысль. Займусь в фоне, вам ничего отслеживать не нужно.</string>
+    <string name="demo_fallback_3">Посмотрю внимательнее и вернусь с предложением.</string>
+    <string name="demo_fallback_4">Записал в список. Скажу, как только будет готово к проверке.</string>
+    <string name="demo_reply_file">Файл получен! После подключения к шлюзу Hermes сможет его прочитать, разобрать или преобразовать.</string>
+    <string name="demo_reply_voice">Голосовое получил! В демо-режиме я его не слушаю, но через шлюз Hermes сначала расшифрует его, а потом ответит.</string>
+    <string name="demo_reply_thanks">Всегда пожалуйста! 🙌</string>
+    <string name="demo_reply_hello">Привет! Я тут. На сервере всё работает — рассказать, как прошла ночь?</string>
+    <string name="demo_reply_deploy">Запускаю прямо сейчас.</string>
+    <string name="demo_task_deploy_title">Выкатываю v2.4 на staging</string>
+    <string name="demo_task_deploy_step_1">Забрать ветку main</string>
+    <string name="demo_task_deploy_step_2">Прогнать тесты</string>
+    <string name="demo_task_deploy_step_3">Собрать образ</string>
+    <string name="demo_task_deploy_step_4">Выкатить на staging</string>
+    <string name="demo_task_deploy_outro">Уже на staging ✅ Все тесты прошли (148/148).</string>
+    <string name="demo_reply_mail">Черновик готов. Перед отправкой нужно ваше согласие.</string>
+    <string name="demo_approval_mail_title">Отправить команде «Недельную сводку» (6 получателей)</string>
+    <string name="demo_approval_mail_detail">Всем привет!\nЗа неделю: v2.4 на staging, исправлены 3 бага, демо для клиента назначено на четверг, 14:00…</string>
+    <string name="demo_tool_memory_detail">ночь на 1 ноября</string>
+    <string name="demo_reply_night_1">За ночь: разобрано 23 письма, на 2 ждут вашего ответа.</string>
+    <string name="demo_reply_night_2">Ещё перезапустил службу бэкапа — она остановилась в 3:12. Ничего не потеряно.</string>
+    <string name="demo_reply_question">Хороший вопрос. Судя по серверу — да, но для верности проверяю логи.</string>
+    <string name="demo_approval_sent">Отправлено ✉️ Слежу за ответами.</string>
+    <string name="demo_approval_declined">Без проблем, отложу черновик.</string>
+
+    <!-- Общие действия -->
+    <string name="action_approve">Разрешить</string>
+    <string name="action_decline">Отклонить</string>
+    <string name="action_reply">Ответить</string>
+    <string name="action_cancel">Отмена</string>
+    <string name="action_close">Закрыть</string>
+    <string name="action_stop">Стоп</string>
+    <string name="action_take_over">Перехватить</string>
+
+    <!-- Статус агента и соединения -->
+    <string name="status_online">В сети</string>
+    <string name="status_thinking">Думает…</string>
+    <string name="status_typing">Печатает…</string>
+    <string name="conn_offline">Не в сети</string>
+    <string name="conn_reconnecting">Переподключение…</string>
+    <string name="conn_demo">Демо</string>
+    <string name="latency_ms">%1$d мс</string>
+
+    <!-- Экран подключения -->
+    <string name="connect_tagline">Ваш агент — на расстоянии одного сообщения.\nПодключите его шлюз, чтобы начать.</string>
+    <string name="connect_gateway">Шлюз</string>
+    <string name="connect_gateway_hint">wss://ваш-сервер/dots/ws</string>
+    <string name="connect_token">Токен</string>
+    <string name="connect_token_hint">DOTS_TOKEN сервера</string>
+    <string name="connect_token_help">Токен лежит на сервере в ~/.hermes/.env (DOTS_TOKEN). Он хранится только на этом телефоне.</string>
+    <string name="connect_connecting">Подключение…</string>
+    <string name="connect_button">Подключить</string>
+    <string name="connect_demo">Попробовать демо-режим</string>
+
+    <!-- Переписка -->
+    <string name="composer_placeholder">Сообщение для %1$s</string>
+    <string name="chat_start">Начало переписки</string>
+    <string name="chat_browsing">%1$s в браузере · Смотреть экран</string>
+    <string name="chat_file_too_big">Файл слишком большой (максимум 20 МБ)</string>
+    <string name="attach_photo">Фото</string>
+    <string name="attach_file">Файл</string>
+    <string name="day_today">Сегодня</string>
+    <string name="day_yesterday">Вчера</string>
+    <string name="receipt_sending">Отправка…</string>
+    <string name="receipt_sent">Отправлено</string>
+    <string name="receipt_read">Прочитано · %1$s</string>
+    <string name="voice_message">Голосовое сообщение</string>
+    <string name="voice_transcript">«%1$s»</string>
+    <string name="code_copy">Копировать</string>
+    <string name="code_copied">Скопировано</string>
+    <string name="file_default_name">файл</string>
+    <string name="file_no_app">Нет приложения, чтобы открыть этот файл</string>
+
+    <!-- Описания для спецвозможностей -->
+    <string name="cd_my_dots">Мои точки</string>
+    <string name="cd_suggestions">Подсказки</string>
+    <string name="cd_send">Отправить</string>
+    <string name="cd_record_voice">Записать голосовое</string>
+    <string name="cd_cancel_voice">Отменить голосовое</string>
+    <string name="cd_send_voice">Отправить голосовое</string>
+    <string name="cd_pause">Пауза</string>
+    <string name="cd_play">Воспроизвести</string>
+    <string name="cd_collapse">Свернуть</string>
+    <string name="cd_expand">Подробнее</string>
+    <string name="cd_failed">Ошибка</string>
+    <string name="cd_browser_screen">Экран браузера</string>
+    <string name="cd_send_enter">Отправить и нажать Enter</string>
+    <string name="cd_erase">Удалить</string>
+    <string name="cd_new_dot">Новая точка</string>
+
+    <!-- Карточки агента (задача, согласие, вопрос, перехват) -->
+    <string name="task_done">Задача выполнена</string>
+    <string name="task_running">Задача выполняется</string>
+    <string name="approval_required">Нужно ваше согласие</string>
+    <string name="approval_decided">Решение принято</string>
+    <string name="approval_default_title">Команда на подтверждение</string>
+    <string name="approval_approved">Разрешено</string>
+    <string name="approval_declined">Отклонено</string>
+    <string name="clarify_question">Вопрос</string>
+    <string name="clarify_free_answer">Просто ответьте в переписке.</string>
+    <string name="takeover_needed">Нужна ваша помощь в его браузере</string>
+    <string name="takeover_handed_back">Управление возвращено</string>
+    <string name="takeover_hint">Всё, что вы печатаете, уходит на его страницу, а не в переписку.</string>
+    <string name="takeover_resumed">Агент снова управляет</string>
+    <string name="takeover_done_answer">Готово</string>
+    <string name="takeover_done_message">Всё, я закончил в вашем браузере — можно продолжать.</string>
+
+    <!-- Экран браузера агента -->
+    <string name="screen_you_drive">Управляете вы</string>
+    <string name="screen_of">Экран: %1$s</string>
+    <string name="screen_empty">Браузер ещё не открыт.\nПопросите агента зайти на сайт — экран появится здесь в реальном времени.</string>
+    <string name="screen_take_over_hint">Чтобы войти, пройти капчу или закрыть баннер: вы действуете прямо на его странице.</string>
+    <string name="screen_type_hint">Нажмите на поле на странице и печатайте здесь: текст уходит прямо на страницу, а не в переписку.</string>
+    <string name="screen_type_placeholder">Печатать на странице…</string>
+    <string name="screen_hand_back">Вернуть управление</string>
+    <string name="key_tab">Tab</string>
+    <string name="key_escape">Esc</string>
+    <string name="badge_driving">УПРАВЛЯЕТЕ ВЫ</string>
+    <string name="badge_live">ВЖИВУЮ</string>
+    <string name="badge_paused">ПАУЗА</string>
+
+    <!-- Активность -->
+    <string name="activity_usage">Расход</string>
+    <string name="usage_tokens">Токены</string>
+    <string name="usage_messages">Сообщения</string>
+    <string name="usage_previous_month">Прошлый месяц</string>
+    <string name="usage_next_month">Следующий месяц</string>
+    <string name="usage_month_total">Итого за месяц</string>
+    <string name="usage_less">Меньше</string>
+    <string name="usage_more">Больше</string>
+    <string name="usage_unavailable">Статистика пока недоступна: обновите плагин Dots на шлюзе.</string>
+    <plurals name="usage_tokens_count">
+        <item quantity="one">%s токен</item>
+        <item quantity="few">%s токена</item>
+        <item quantity="many">%s токенов</item>
+        <item quantity="other">%s токена</item>
+    </plurals>
+    <plurals name="usage_messages_count">
+        <item quantity="one">%d сообщение</item>
+        <item quantity="few">%d сообщения</item>
+        <item quantity="many">%d сообщений</item>
+        <item quantity="other">%d сообщения</item>
+    </plurals>
+    <plurals name="usage_active_days">
+        <item quantity="one">%d активный день</item>
+        <item quantity="few">%d активных дня</item>
+        <item quantity="many">%d активных дней</item>
+        <item quantity="other">%d активного дня</item>
+    </plurals>
+    <string name="activity_title">Активность</string>
+    <string name="activity_now">Сейчас</string>
+    <string name="activity_browser">Браузер</string>
+    <string name="activity_scheduled">Задачи по расписанию</string>
+    <string name="activity_no_crons">Нет задач по расписанию. Попросите, например, присылать сводку каждое утро.</string>
+    <string name="activity_recent">Недавно</string>
+    <string name="activity_nothing">Пока ничего.</string>
+    <string name="activity_typing_reply">Пишет ответ…</string>
+    <string name="activity_idle">Свободен · на связи</string>
+    <string name="activity_watch_screen">Смотреть экран вживую</string>
+    <string name="turn_untitled">Сообщение</string>
+    <string name="cron_run_now">Запустить сейчас</string>
+    <string name="cron_finished">Завершена</string>
+    <string name="cron_paused">На паузе</string>
+    <string name="cron_next">следующий запуск %1$s</string>
+    <string name="schedule_once_in">однократно, через</string>
+    <string name="schedule_every_day_at">каждый день в</string>
+    <string name="time_in_a_moment">скоро</string>
+    <string name="time_in_minutes">через %1$d мин</string>
+    <string name="time_at">в %1$s</string>
+    <string name="time_minutes_ago">%1$d мин назад</string>
+    <string name="time_just_now">только что</string>
+    <string name="time_hours_ago">%1$d ч назад</string>
+
+    <!-- Настройки главной точки -->
+    <string name="settings_name">Имя</string>
+    <string name="settings_agent_name">Имя агента</string>
+    <string name="settings_connection">Подключение</string>
+    <string name="settings_latency">Задержка</string>
+    <string name="settings_encryption">Шифрование</string>
+    <string name="settings_source">Источник</string>
+    <string name="settings_source_gateway">Шлюз Hermes (плагин dots)</string>
+    <string name="settings_source_demo">Демо-данные</string>
+    <string name="settings_mascot">Талисман</string>
+    <string name="settings_display">Оформление</string>
+    <string name="settings_color">Цвет</string>
+    <string name="settings_accessory">Аксессуар</string>
+    <string name="settings_disconnect">Отключиться</string>
+    <!-- Несколько агентов Hermes -->
+    <string name="agents_title">Агенты</string>
+    <string name="agents_add_row">Добавить агента</string>
+    <string name="agents_add_title">Новый агент</string>
+    <string name="agents_add_tagline">Другой агент Hermes со своим шлюзом.\nЕго переписка, память и инструменты отдельно.</string>
+    <string name="agents_add_cancel">Отмена</string>
+    <string name="agents_switch_to">Или откройте другого агента:</string>
+    <string name="agents_remove">Удалить этого агента</string>
+    <string name="agents_add_hint">Для агента Hermes, у которого уже установлен шлюз (отдельный профиль Hermes со своей памятью, инструментами и ключами). Чтобы разделить работу одного агента, создайте подточку в «Моих точках».</string>
+    <string name="agents_busy">Работает…</string>
+    <string name="cd_switch_agent">Сменить агента</string>
+    <string name="theme_auto">Авто</string>
+    <string name="theme_light">Светлая</string>
+    <string name="theme_dark">Тёмная</string>
+
+    <!-- Талисманы, аксессуары и цвета -->
+    <string name="species_galet">Галька</string>
+    <string name="species_nuage">Облачко</string>
+    <string name="species_pave">Булыжник</string>
+    <string name="accessory_winged_cap">Крылатый шлем</string>
+    <string name="accessory_antenna">Антенна</string>
+    <string name="accessory_sprout">Росток</string>
+    <string name="accessory_none">Без шапки</string>
+    <string name="color_tangerine">Мандарин</string>
+    <string name="color_bubblegum">Жвачка</string>
+    <string name="color_sky">Небо</string>
+    <string name="color_lime">Лайм</string>
+    <string name="color_sun">Солнце</string>
+    <string name="color_grape">Виноград</string>
+
+    <!-- Подточки -->
+    <string name="dot_new">Новая</string>
+    <string name="dot_kind_temporary">Временная</string>
+    <string name="dot_kind_permanent">Постоянная</string>
+    <string name="dot_temporary_intro">Для конкретного поручения, потом закрывается.</string>
+    <string name="dot_permanent_intro">Специалист, который остаётся, со своей перепиской.</string>
+    <string name="dot_type">Тип</string>
+    <string name="dot_mission">Поручение</string>
+    <string name="dot_specialty">Специализация</string>
+    <string name="dot_mission_hint">Например: сравни три тарифа интернета и скажи, какой лучше</string>
+    <string name="dot_specialty_hint">Например: мой бухгалтер — счета, расходы, налоги, сроки</string>
+    <string name="dot_name_optional">Имя (необязательно)</string>
+    <string name="dot_name_hint">Например: Бухгалтерия</string>
+    <string name="dot_create">Создать точку</string>
+    <string name="dot_save">Сохранить</string>
+    <string name="dot_close_mission">Поручение выполнено: закрыть точку</string>
+    <string name="dot_delete">Удалить эту точку</string>
+    <string name="dot_close_title">Закрыть %1$s?</string>
+    <string name="dot_this">эту точку</string>
+    <string name="dot_close_text">Её переписка будет стёрта. То, что она сделала на сервере, останется, а главная точка не пострадает.</string>
+    <string name="dot_close_confirm">Закрыть точку</string>
+
+    <!-- Уведомления -->
+    <string name="notif_channel_name">Сообщения от Hermes</string>
+    <string name="notif_channel_description">Ответы, вопросы и запросы согласия от вашего агента</string>
+    <string name="notif_me">Я</string>
+    <string name="notif_reply_not_sent">%1$s  (не отправлено — откройте приложение)</string>
+    <string name="notif_approval_title">%1$s ждёт вашего согласия</string>
+    <string name="notif_approval_approving">Разрешаю…</string>
+    <string name="notif_approval_declining">Отклоняю…</string>
+    <string name="notif_approval_sending">Передаю решение агенту %1$s</string>
+    <string name="notif_approval_approved">Разрешено ✓</string>
+    <string name="notif_approval_declined">Отклонено</string>
+    <string name="notif_approval_approved_text">%1$s продолжает работу.</string>
+    <string name="notif_approval_declined_text">%1$s не будет выполнять команду.</string>
+    <string name="notif_approval_not_sent">Решение не отправлено</string>
+    <string name="notif_approval_not_sent_text">Шлюз недоступен: откройте приложение, чтобы ответить.</string>
+
+    <!-- Обновления приложения (релизы GitHub) -->
+    <string name="settings_app">Приложение</string>
+    <string name="settings_version">Версия %1$s</string>
+    <string name="update_channel_name">Обновления приложения</string>
+    <string name="update_channel_description">Когда выходит новая версия Hermes</string>
+    <string name="update_notif_available_title">Доступен Hermes %1$s</string>
+    <string name="update_notif_available_text">Нажмите, чтобы установить обновление.</string>
+    <string name="update_notif_updated_title">Hermes обновлён до %1$s</string>
+    <string name="update_notif_updated_text">Нажмите, чтобы открыть приложение.</string>
+    <string name="update_title">Доступно обновление</string>
+    <string name="update_available_text">Версия %1$s готова (у вас %2$s). Она ставится поверх текущей: переписка и настройки сохранятся.</string>
+    <string name="update_permission_title">Ещё один шаг</string>
+    <string name="update_permission_text">Android один раз попросит разрешение: позвольте Hermes устанавливать приложения и вернитесь сюда. Обновление продолжится само.</string>
+    <string name="update_downloading">Загрузка… %1$d %%</string>
+    <string name="update_installing">Установка… Android может попросить подтверждение.</string>
+    <string name="update_failed_title">Обновление не удалось</string>
+    <string name="update_action_install">Обновить</string>
+    <string name="update_action_later">Позже</string>
+    <string name="update_action_open_settings">Открыть настройки</string>
+    <string name="update_action_hide">Скрыть</string>
+    <string name="update_action_retry">Повторить</string>
+    <string name="update_status_check">Проверить обновления</string>
+    <string name="update_status_checking">Проверяю…</string>
+    <string name="update_status_up_to_date">Последняя версия</string>
+    <string name="update_status_available">Доступна %1$s</string>
+    <string name="update_status_installing">Установка…</string>
+    <string name="update_status_disabled">В этой сборке обновления выключены</string>
+    <string name="update_error_check">Не удалось связаться с GitHub. Проверьте подключение.</string>
+    <string name="update_error_download">Загрузка не удалась. Попробуйте ещё раз.</string>
+    <string name="update_error_checksum">Загруженный файл повреждён (не совпала контрольная сумма). Попробуйте ещё раз.</string>
+    <string name="update_error_install">Android отклонил обновление.</string>
+
+    <!-- Переменные количества -->
+    <plurals name="tool_actions">
+        <item quantity="one">%d действие</item>
+        <item quantity="few">%d действия</item>
+        <item quantity="many">%d действий</item>
+        <item quantity="other">%d действия</item>
+    </plurals>
+    <plurals name="tool_failed">
+        <item quantity="one">%d с ошибкой</item>
+        <item quantity="few">%d с ошибкой</item>
+        <item quantity="many">%d с ошибкой</item>
+        <item quantity="other">%d с ошибкой</item>
+    </plurals>
+    <plurals name="task_progress">
+        <item quantity="one">%1$d из %2$d шага</item>
+        <item quantity="few">%1$d из %2$d шагов</item>
+        <item quantity="many">%1$d из %2$d шагов</item>
+        <item quantity="other">%1$d из %2$d шага</item>
+    </plurals>
+    <plurals name="schedule_every_minutes">
+        <item quantity="one">каждую %d мин</item>
+        <item quantity="few">каждые %d мин</item>
+        <item quantity="many">каждые %d мин</item>
+        <item quantity="other">каждые %d мин</item>
+    </plurals>
+    <plurals name="schedule_every_hours">
+        <item quantity="one">каждый %d ч</item>
+        <item quantity="few">каждые %d ч</item>
+        <item quantity="many">каждые %d ч</item>
+        <item quantity="other">каждые %d ч</item>
+    </plurals>
+    <plurals name="schedule_every_days">
+        <item quantity="one">каждый %d день</item>
+        <item quantity="few">каждые %d дня</item>
+        <item quantity="many">каждые %d дней</item>
+        <item quantity="other">каждые %d дня</item>
+    </plurals>
+
+    <!-- Подсказки кнопки «+» -->
+    <string-array name="chat_suggestions">
+        <item>Что ты делал ночью?</item>
+        <item>Что у меня на сегодня?</item>
+        <item>Перескажи последние сообщения</item>
+        <item>Спасибо, Hermes!</item>
+    </string-array>
+    <!-- Групповая комната -->
+    <string name="room_chip">Комната</string>
+    <string name="room_title">Групповая комната</string>
+    <string name="room_explain">Выберите подточки для приглашения. Они обсуждают каждое ваше сообщение %1$d раунда(ов) в этом порядке, затем %2$s подводит итог.</string>
+    <string name="room_no_dots">Сначала создайте подточку — тогда она сможет участвовать в обсуждении.</string>
+    <string name="room_open">Открыть комнату</string>
+    <string name="room_update">Обновить комнату</string>
+    <string name="room_close">Закрыть комнату</string>
+    <string name="room_bar_title">Комната · %1$s</string>
+    <string name="room_bar_subtitle">итог подводит %1$s</string>
+    <string name="room_placeholder">Спросить комнату</string>
+    <string name="room_speaking">Говорит %1$s…</string>
+    <plurals name="room_limit">
+        <item quantity="one">Не больше %1$d гостя.</item>
+        <item quantity="few">Не больше %1$d гостей.</item>
+        <item quantity="many">Не больше %1$d гостей.</item>
+        <item quantity="other">Не больше %1$d гостя.</item>
+    </plurals>
+    <!-- Веб-приложение: привязка браузера по QR-коду -->
+    <string name="web_section">Веб-приложение</string>
+    <string name="web_connect_row">Подключить браузер</string>
+    <string name="web_sessions_row">Сеансы браузеров</string>
+    <string name="web_scan_title">Подключить браузер</string>
+    <string name="web_scan_hint">Откройте веб-приложение Dots на компьютере и наведите камеру на показанный QR-код.</string>
+    <string name="web_camera_title">Сканируйте QR-код веб-приложения</string>
+    <string name="web_camera_rationale">Камера нужна Hermes только чтобы прочитать QR-код веб-приложения. Ничего не записывается и не отправляется.</string>
+    <string name="web_camera_blocked">Доступ Hermes к камере выключен. Разрешите его в настройках приложения, чтобы сканировать QR-код.</string>
+    <string name="web_camera_allow">Разрешить камеру</string>
+    <string name="web_camera_settings">Открыть настройки</string>
+    <string name="web_qr_not_pairing">Этот QR-код не от веб-приложения Dots.</string>
+    <string name="web_qr_unsupported">Этот QR-код от более новой версии веб-приложения: сначала обновите Hermes.</string>
+    <string name="web_qr_insecure">Отклонено: веб-приложение должно работать по https.</string>
+    <string name="web_qr_malformed">QR-код не читается. Перезагрузите страницу веб-приложения и сканируйте снова.</string>
+    <string name="web_confirm_title">Подключить браузер на %1$s?</string>
+    <string name="web_confirm_agents">Агенты, доступные этому браузеру</string>
+    <string name="web_confirm_offline">Не в сети: доступа не будет</string>
+    <string name="web_confirm_none">Сейчас ни один агент не подключён: открывать доступ не к чему.</string>
+    <string name="web_confirm_warning">Сканируйте только QR-код на своём экране. Этот браузер сможет общаться с этими агентами, пока вы не отзовёте доступ.</string>
+    <string name="web_connect">Подключить</string>
+    <string name="web_working">Подключаю браузер на %1$s…</string>
+    <string name="web_success_title">Браузер подключён</string>
+    <string name="web_success_text">%1$s теперь доступен с %2$s.</string>
+    <string name="web_failed_title">Браузер не подключён</string>
+    <string name="web_error_nothing">Ни одного агента не удалось открыть этому браузеру.</string>
+    <string name="web_error_expired">QR-код устарел или уже использован. Сканируйте новый из веб-приложения.</string>
+    <string name="web_error_invalid">Веб-приложение отклонило этот QR-код. Перезагрузите страницу и сканируйте снова.</string>
+    <string name="web_error_network">Не удалось связаться с %1$s. Проверьте подключение и попробуйте с новым QR-кодом.</string>
+    <string name="web_issues_title">Доступ не открыт</string>
+    <string name="web_issue_offline">%1$s не в сети: доступ не открыт.</string>
+    <string name="web_issue_origin">%1$s не доверяет %2$s. На этом шлюзе добавьте DOTS_WEB_ORIGINS=%2$s (или запустите install.sh с --web-origin %2$s), перезапустите его и сканируйте снова.</string>
+    <string name="web_issue_unsupported">%1$s: его плагин dots слишком старый для веб-приложения. Обновите его на шлюзе.</string>
+    <string name="web_issue_no_reply">%1$s не ответил вовремя: доступ не открыт.</string>
+    <string name="web_done">Готово</string>
+    <string name="web_scan_again">Сканировать снова</string>
+    <string name="web_sessions_title">Сеансы браузеров</string>
+    <string name="web_sessions_hint">У каждого браузера свой токен, отдельный от токена телефона. Отзыв сразу закрывает его соединение.</string>
+    <string name="web_sessions_loading">Загрузка…</string>
+    <string name="web_sessions_empty">Нет подключённых браузеров.</string>
+    <string name="web_sessions_offline">Агент не в сети: список недоступен.</string>
+    <string name="web_session_seen">был %1$s</string>
+    <string name="web_revoke">Отозвать</string>
+    <string name="web_revoke_title">Отозвать доступ этого браузера?</string>
+    <string name="web_revoke_text">«%1$s» сразу отключится от %2$s. Чтобы вернуться, понадобится новый QR-код.</string>
+</resources>
