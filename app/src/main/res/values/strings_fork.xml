@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fork (GuiltHC) strings, kept apart from upstream strings.xml to ease merges. Russian: values-ru/strings_fork.xml. -->
+<resources>
+    <string name="goals_title">Goals</string>
+    <string name="goals_entry_empty">Background goals: the agent works and reports findings</string>
+    <plurals name="goals_active">
+        <item quantity="one">%d active goal</item>
+        <item quantity="other">%d active goals</item>
+    </plurals>
+    <string name="goals_intro">The agent works on each goal in the background on a schedule and writes to you when it finds something.</string>
+    <string name="goals_current">Current goals</string>
+    <string name="goals_none">No goals yet. Describe one below.</string>
+    <string name="goals_new">New goal</string>
+    <string name="goals_hint">E.g.: watch for an RTX 5070 under 50 000 ₽ in Moscow stores</string>
+    <string name="goals_frequency">Check</string>
+    <string name="goals_freq_hourly">Every hour</string>
+    <string name="goals_freq_3h">Every 3 h</string>
+    <string name="goals_freq_daily">Daily at 9:00</string>
+    <string name="goals_freq_weekly">Mondays at 9:00</string>
+    <string name="goals_only_findings">Only write when there is a finding</string>
+    <string name="goals_only_findings_hint">Otherwise the agent reports after every check</string>
+    <string name="goals_create">Start the goal</string>
+    <string name="goals_sent">Sent to the agent</string>
+    <string name="goals_sent_hint">The agent is creating the goal: its reply is in the main chat, and the goal will show up here in a few seconds.</string>
+    <string name="goals_last_check">checked %1$s</string>
+    <string name="goals_daily_at">every day at %1$s</string>
+    <string name="goals_weekly_at">weekly at %1$s</string>
+    <string name="goals_delete_title">Delete “%1$s”?</string>
+    <string name="goals_delete_text">The agent will remove this scheduled task. Its notes stay on the server.</string>
+    <string name="goals_delete_confirm">Delete</string>
+</resources>

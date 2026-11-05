@@ -51,6 +51,9 @@ import app.dotshermes.update.UpdateState
 import app.dotshermes.ui.update.UpdateDialog
 import app.dotshermes.ui.update.updateStatusText
 import kotlinx.coroutines.launch
+import app.dotshermes.data.model.MAIN_CHAT
+import app.dotshermes.fork.goals.GoalsEntryRow
+import app.dotshermes.fork.goals.GoalsSheet
 
 /** Racine : écran d'appairage tant que le gateway n'est pas connecté, puis la conversation unique. */
 @Composable
@@ -74,6 +77,7 @@ fun HermesApp(
     var agentSheetOpen by rememberSaveable { mutableStateOf(false) }
     var agentMenuOpen by rememberSaveable { mutableStateOf(false) }
     var activityOpen by rememberSaveable { mutableStateOf(false) }
+    var goalsOpen by rememberSaveable { mutableStateOf(false) } // форк: экран «Цели»
     var screenOpen by rememberSaveable { mutableStateOf(false) }
     var screenTakeover by rememberSaveable { mutableStateOf(false) }
     // App web : scanner du QR code d'un navigateur, et liste des navigateurs appairés.
@@ -203,6 +207,17 @@ fun HermesApp(
                 onStop = viewModel::stopTurn,
                 onOpenScreen = { screenOpen = true },
                 onDismiss = { activityOpen = false },
+                header = { if (!demo) GoalsEntryRow(snapshot) { activityOpen = false; goalsOpen = true } },
+            )
+        }
+
+        if (goalsOpen) {
+            GoalsSheet(
+                snapshot = snapshot,
+                onRefresh = viewModel::refreshActivity,
+                onCron = viewModel::cronAction,
+                onSendToMain = { text -> viewModel.selectChat(MAIN_CHAT); viewModel.send(text) },
+                onDismiss = { goalsOpen = false },
             )
         }
 

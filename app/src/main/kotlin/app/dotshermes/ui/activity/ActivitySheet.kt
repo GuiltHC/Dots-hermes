@@ -88,6 +88,7 @@ fun ActivitySheet(
     onStop: () -> Unit,
     onOpenScreen: () -> Unit,
     onDismiss: () -> Unit,
+    header: @Composable () -> Unit = {}, // форк: вход на экран «Цели»
 ) {
     // Les crons bougent tout seuls (prochaine exécution, statut) : on rafraîchit tant que la vue est ouverte.
     LaunchedEffect(Unit) {
@@ -106,6 +107,7 @@ fun ActivitySheet(
     ) {
         Column(Modifier.fillMaxWidth().verticalScroll(rememberScrollState()).padding(horizontal = 16.dp).padding(bottom = 28.dp)) {
             Text(stringResource(R.string.activity_title), style = MaterialTheme.typography.headlineSmall, color = Ink.Primary, modifier = Modifier.padding(start = 4.dp))
+            header()
 
             SectionLabel(stringResource(R.string.activity_usage))
             GroupedCard { UsageCard(usage, onUsage) }

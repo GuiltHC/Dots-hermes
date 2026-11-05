@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Строки форка (GuiltHC), отдельно от строк автора ради слияний. -->
+<resources>
+    <string name="goals_title">Цели</string>
+    <string name="goals_entry_empty">Фоновые цели: агент работает и присылает находки</string>
+    <plurals name="goals_active">
+        <item quantity="one">%d активная цель</item>
+        <item quantity="few">%d активные цели</item>
+        <item quantity="many">%d активных целей</item>
+        <item quantity="other">%d активной цели</item>
+    </plurals>
+    <string name="goals_intro">Агент работает над каждой целью в фоне по расписанию и пишет вам, когда что-то находит.</string>
+    <string name="goals_current">Текущие цели</string>
+    <string name="goals_none">Целей пока нет. Опишите первую ниже.</string>
+    <string name="goals_new">Новая цель</string>
+    <string name="goals_hint">Например: следи за RTX 5070 дешевле 50 000 ₽ в магазинах Москвы</string>
+    <string name="goals_frequency">Проверять</string>
+    <string name="goals_freq_hourly">Каждый час</string>
+    <string name="goals_freq_3h">Каждые 3 ч</string>
+    <string name="goals_freq_daily">Ежедневно в 9:00</string>
+    <string name="goals_freq_weekly">По понедельникам в 9:00</string>
+    <string name="goals_only_findings">Писать только при находке</string>
+    <string name="goals_only_findings_hint">Иначе агент отчитывается после каждой проверки</string>
+    <string name="goals_create">Запустить цель</string>
+    <string name="goals_sent">Отправлено агенту</string>
+    <string name="goals_sent_hint">Агент создаёт цель: его ответ — в главной переписке, а цель появится здесь через несколько секунд.</string>
+    <string name="goals_last_check">проверено %1$s</string>
+    <string name="goals_daily_at">каждый день в %1$s</string>
+    <string name="goals_weekly_at">раз в неделю в %1$s</string>
+    <string name="goals_delete_title">Удалить «%1$s»?</string>
+    <string name="goals_delete_text">Агент удалит эту задачу по расписанию. Её заметки на сервере останутся.</string>
+    <string name="goals_delete_confirm">Удалить</string>
+</resources>
