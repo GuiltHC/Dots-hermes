@@ -48,6 +48,7 @@ class MainActivity : ComponentActivity() {
             navigationBarStyle = SystemBarStyle.light(Color.TRANSPARENT, Color.TRANSPARENT),
         )
         super.onCreate(savedInstanceState)
+        app.dotshermes.fork.display.HighRefresh.apply(this) // форк: 144 Гц
         setContent { HermesApp() }
         openChatFrom(intent)
         if (Build.VERSION.SDK_INT >= 33 &&
