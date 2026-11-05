@@ -653,6 +653,8 @@ class DotsAdapter(BasePlatformAdapter):
             self._lang = DEFAULT_LANGUAGE
         creds = _extra_or_secret(extra, "fcm_credentials", "DOTS_FCM_CREDENTIALS", "") or str(home / "fcm-service-account.json")
         self._push_sender = _Push(Path(creds).expanduser(), home / "push_tokens.json")
+        from .fork_push import DeferredPush  # fork: push the final text, not the streaming placeholder
+        self._fork_push = DeferredPush(self._notify, lambda chat: self._activity_of(chat) != "idle")
         self._web_tokens = _WebTokens(home / "web_tokens.json")
         self._voice_dir = home / "voice"
         self._voice_dir.mkdir(parents=True, exist_ok=True)
@@ -1626,6 +1628,7 @@ class DotsAdapter(BasePlatformAdapter):
             self._activities[chat] = "idle"
         else:
             await self._set_activity(chat, "idle")
+            self._fork_push.on_turn_complete(chat)  # fork
         # Calls without a tool_call_id (or interrupted ones) never get a post hook: close them here.
         for call_id in list(self._tool_started):
             await self.tool_finished(call_id, failed=False)
@@ -1700,7 +1703,7 @@ class DotsAdapter(BasePlatformAdapter):
         })
         await self._push(event)
         if not self._room_parts(chat):  # a debate would ring once per speaker: only its conclusion notifies
-            self._notify("message", event["id"], content, chat)
+            self._fork_push.on_send(event["id"], chat, content)  # fork (was: self._notify)
         if self._activity_of(chat) != "idle":
             await self._set_activity(chat, "typing")
         return SendResult(success=True, message_id=event["id"])
@@ -1712,6 +1715,7 @@ class DotsAdapter(BasePlatformAdapter):
         # A room speaker's last edit is not the end of the debate: its room keeps "typing" until the next one.
         await self._set_activity(chat, "idle" if finalize and not self._room_parts(chat) else "typing")
         await self._push({"type": "edit", "id": message_id, "text": content[:MAX_MESSAGE_LENGTH], "final": finalize})
+        self._fork_push.on_edit(message_id, content, finalize)  # fork
         return SendResult(success=True, message_id=message_id)
 
     async def _send_exec_approval_prompt(self, prompt) -> SendResult:
