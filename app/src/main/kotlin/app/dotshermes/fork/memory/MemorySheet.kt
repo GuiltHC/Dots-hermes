@@ -192,8 +192,9 @@ private fun EntryDialog(initial: String, isNew: Boolean, saving: Boolean, onSave
             }
         },
         confirmButton = {
-            TextButton(onClick = { onSave(text) }, enabled = !saving && text.isNotBlank() && text.trim() != initial.trim()) {
-                Text(stringResource(R.string.dot_save), color = palette.deep)
+            val canSave = !saving && text.isNotBlank() && text.trim() != initial.trim()
+            TextButton(onClick = { onSave(text) }, enabled = canSave) {
+                Text(stringResource(R.string.dot_save), color = if (canSave) palette.deep else Ink.Tertiary)
             }
         },
         dismissButton = {
