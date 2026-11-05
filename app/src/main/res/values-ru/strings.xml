@@ -203,8 +203,8 @@
     <string name="usage_previous_month">Прошлый месяц</string>
     <string name="usage_next_month">Следующий месяц</string>
     <string name="usage_month_total">Итого за месяц</string>
-    <string name="usage_less">Меньше</string>
-    <string name="usage_more">Больше</string>
+    <string name="usage_less">−</string>
+    <string name="usage_more">+</string>
     <string name="usage_unavailable">Статистика пока недоступна: обновите плагин Dots на шлюзе.</string>
     <plurals name="usage_tokens_count">
         <item quantity="one">%s токен</item>
@@ -382,19 +382,19 @@
         <item quantity="other">%1$d из %2$d шага</item>
     </plurals>
     <plurals name="schedule_every_minutes">
-        <item quantity="one">каждую %d мин</item>
+        <item quantity="one">каждую минуту</item>
         <item quantity="few">каждые %d мин</item>
         <item quantity="many">каждые %d мин</item>
         <item quantity="other">каждые %d мин</item>
     </plurals>
     <plurals name="schedule_every_hours">
-        <item quantity="one">каждый %d ч</item>
+        <item quantity="one">каждый час</item>
         <item quantity="few">каждые %d ч</item>
         <item quantity="many">каждые %d ч</item>
         <item quantity="other">каждые %d ч</item>
     </plurals>
     <plurals name="schedule_every_days">
-        <item quantity="one">каждый %d день</item>
+        <item quantity="one">каждый день</item>
         <item quantity="few">каждые %d дня</item>
         <item quantity="many">каждые %d дней</item>
         <item quantity="other">каждые %d дня</item>
