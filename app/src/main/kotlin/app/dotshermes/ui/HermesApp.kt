@@ -137,15 +137,21 @@ fun HermesApp(
     SystemBarsFor(dark)
     // La conversation affichée donne sa couleur à toute l'interface : on sait toujours à quel dot on parle.
     DotsTheme(look.appearance.palette, dark) {
+        // Форк: у привязанного агента при запуске сразу открываем переписку («Переподключение…»),
+        // а не экран шлюза на время соединения. Экран шлюза — для новой привязки и для ошибки.
+        val paired = !addingAgent && activeAgent?.let { AppContainer.agents.store.get(it) } != null
+        val starting = paired && (connection is ConnectionState.Connecting || connection == ConnectionState.Disconnected)
+        val chatConnection = connection as? ConnectionState.Connected
+            ?: if (starting) ConnectionState.Connected(gatewayUrl = "", latencyMs = 0, online = false) else null
         AnimatedContent(
-            targetState = connection is ConnectionState.Connected,
+            targetState = connection is ConnectionState.Connected || starting,
             transitionSpec = { (fadeIn(tween(450)) + scaleIn(tween(450), initialScale = 0.97f)) togetherWith fadeOut(tween(200)) },
             label = "root",
         ) { inChat ->
             if (inChat) {
                 ChatScreen(
                     state = chat,
-                    connection = connection as? ConnectionState.Connected,
+                    connection = chatConnection,
                     appearance = look.appearance,
                     onSend = viewModel::send,
                     onReact = viewModel::toggleReaction,
